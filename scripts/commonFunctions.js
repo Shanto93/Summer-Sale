@@ -25,13 +25,20 @@ function totalPrice(id)
     const currentTotal = itemPrice + prevTotal;
     prevTotalId.innerText = currentTotal;
 
-    // discount part
-    const discount = (0.2 * currentTotal).toFixed(2);
-    const disId = document.getElementById('discount');
-    disId.innerText = discount;
+    const applyButton = document.getElementById('apply-dis');
+    if(currentTotal < 200)
+    {
+        applyButton.setAttribute('disabled', true);
+    }else{
+        applyButton.removeAttribute('disabled');
+    }
 
-    // Total Part
-    const totalId = document.getElementById('total');
-    const total = currentTotal - discount;
-    totalId.innerText = total;
+    const makePurchase = document.getElementById('mpb');
+    if(currentTotal <= 0)
+    {
+        makePurchase.setAttribute('disabled', true);
+    }else{
+        makePurchase.removeAttribute('disabled');
+    }
+
 }

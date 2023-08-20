@@ -35,21 +35,30 @@
     <header>
       <div
         id="banner"
-        class="flex bg-bannerColor items-center mx-auto text-center"
+        class="flex flex-col md:flex-row bg-bannerColor items-center mx-auto text-center"
       >
-        <div id="banner2" class="flex-1 space-y-7">
-          <h3 class="text-2xl font-medium">---SALE FEVER---</h3>
-          <h1 class="text-4xl">
-            Purchase TK 200 or <br />above & get
+        <div
+          id="banner2"
+          class="flex-1 md:mr-10 md:pr-10 space-y-4 md:space-y-7"
+        >
+          <h3 class="text-xl md:text-2xl font-medium">---SALE FEVER---</h3>
+          <h1 class="text-3xl md:text-4xl">
+            Purchase TK 200 or <br class="md:hidden" />above & get
             <span class="text-pink font-bold">20% off</span>
           </h1>
-          <div class="flex justify-center items-center">
-            <p class="text-base font-medium mr-3">Use Promo Code</p>
-            <button class="btn btn-secondary px-4 py-2 font-semibold text-white text-base">SELL200</button>
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <p class="text-sm md:text-base font-medium mb-2 md:mb-0 md:mr-3">
+              Use Promo Code
+            </p>
+            <button
+              class="btn btn-secondary px-4 py-2 font-semibold text-white text-sm md:text-base"
+            >
+              SELL200
+            </button>
           </div>
         </div>
         <div class="flex-1">
-          <img src="./images/Summer 1.png" alt="" srcset="" />
+          <img src="./images/Summer 1.png" alt="" class="md:max-w-full" />
         </div>
       </div>
     </header>
@@ -57,16 +66,19 @@
     <!-- This is main part -->
     <main class="mt-16 mx-28">
       <!-- main div -->
-      <div class="flex justify-around">
+      <div class="flex flex-col lg:flex-row justify-around">
         <!-- left div -->
         <div>
           <div>
             <div>
               <h3 class="text-3xl font-semibold mb-10">Kitchenware</h3>
               <!-- This is card section -->
-              <div class="flex gap-5">
+              <div class="flex flex-col gap-5 md:flex-row">
                 <!-- first card -->
-                <div onclick="firstCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="firstCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod1.png"
@@ -110,12 +122,17 @@
                     <h2 class="card-title text-base font-semibold">
                       K. Accessories
                     </h2>
-                    <p class="text-sm text-priceColor"><span id="card-01-tk">39.00</span> TK</p>
+                    <p class="text-sm text-priceColor">
+                      <span id="card-01-tk">39.00</span> TK
+                    </p>
                   </div>
                 </div>
 
                 <!-- Second card -->
-                <div onclick="secondCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="secondCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod2.png"
@@ -159,11 +176,16 @@
                     <h2 class="card-title text-base font-semibold">
                       K. Accessories
                     </h2>
-                    <p class="text-sm text-priceColor"><span id="card-02-tk">25.00</span> TK</p>
+                    <p class="text-sm text-priceColor">
+                      <span id="card-02-tk">25.00</span> TK
+                    </p>
                   </div>
                 </div>
                 <!-- Third Card -->
-                <div onclick="thirdCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="thirdCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod3.png"
@@ -207,7 +229,9 @@
                     <h2 class="card-title text-base font-semibold">
                       Home Cooker
                     </h2>
-                    <p class="text-sm text-priceColor"><span id="card-03-tk">49.00</span> TK</p>
+                    <p class="text-sm text-priceColor">
+                      <span id="card-03-tk">49.00</span> TK
+                    </p>
                   </div>
                 </div>
 
@@ -220,9 +244,12 @@
             <div class="mt-16">
               <h3 class="text-3xl font-semibold mb-10">Sportswear</h3>
               <!-- This is card section -->
-              <div class="flex gap-5">
+              <div class="flex flex-col gap-5 md:flex-row">
                 <!-- fourth card -->
-                <div onclick="fourthCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="fourthCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod4.png"
@@ -266,12 +293,17 @@
                     <h2 class="card-title text-base font-semibold">
                       Sports Back Cap
                     </h2>
-                    <p class="text-sm text-priceColor"><span id="card-04-tk">49.00</span> TK</p>
+                    <p class="text-sm text-priceColor">
+                      <span id="card-04-tk">49.00</span> TK
+                    </p>
                   </div>
                 </div>
 
                 <!-- fifth card -->
-                <div onclick="fifthCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="fifthCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod5.png"
@@ -315,11 +347,16 @@
                     <h2 class="card-title text-base font-semibold">
                       Full Jersey Set
                     </h2>
-                    <p class="text-sm text-priceColor"><span id="card-05-tk">69.00</span> TK</p>
+                    <p class="text-sm text-priceColor">
+                      <span id="card-05-tk">69.00</span> TK
+                    </p>
                   </div>
                 </div>
                 <!-- Sixth Card -->
-                <div onclick="sixthCard()" class="card w-60 h-80 bg-base-100 shadow-xl">
+                <div
+                  onclick="sixthCard()"
+                  class="card w-60 h-80 bg-base-100 shadow-xl"
+                >
                   <figure class="px-10 pt-10">
                     <img
                       src="./images/prod6.png"
@@ -386,54 +423,79 @@
             <p class="text-base font-bold">Have coupon?</p>
             <div>
               <input
+                id="inputText"
                 class="border w-28 p-2"
                 type="text"
                 placeholder="Coupon code"
               />
-              <!-- <button class="text-base font-semibold bg-pink rounded-lg px-4 py-2 text-white" disabled>Apply</button> -->
-              <button class="btn btn-secondary px-4 py-2 font-semibold text-white text-base" disabled>Apply</button>
+              <button
+                id="apply-dis"
+                class="btn btn-secondary px-4 py-2 font-semibold text-white text-base"
+                disabled
+              >
+                Apply
+              </button>
             </div>
           </div>
 
           <div class="bg-base-100 shadow-xl py-5 px-3 rounded-xl mt-5 relative">
-            <div id="elementList" class="space-y-3">
-             
-            </div>
+            <div id="elementList" class="space-y-3"></div>
 
             <div class="mt-5 mb-5 space-y-3">
               <p>
-                <b>Total Price: </b><span id="tp" class="text-priceColor">00</span
+                <b>Total Price: </b
+                ><span id="tp" class="text-priceColor">0</span
                 ><span class="text-priceColor">TK</span>
               </p>
               <p>
-                <b>Discount: </b><span id="discount" class="text-priceColor">00</span
+                <b>Discount: </b
+                ><span id="discount" class="text-priceColor">0</span
                 ><span class="text-priceColor">TK</span>
               </p>
               <p>
-                <b>Total: </b><span id="total" class="text-priceColor">00</span
+                <b>Total: </b><span id="total" class="text-priceColor">0</span
                 ><span class="text-priceColor">TK</span>
               </p>
             </div>
 
             <div class="absolute left-10">
-              <!-- <button
-                class="text-base w-full font-semibold bg-pink rounded-lg px-4 py-2 text-white"
+              <button
+                id="mpb"
+                class="btn btn-secondary px-4 py-2 w-full font-semibold text-white text-base"
+                disabled
+                onclick="modal01.showModal()"
               >
                 Make Purchase
-              </button> -->
-              <button class="btn btn-secondary px-4 py-2 w-full font-semibold text-white text-base">Make Purchase</button>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
 
+    <!-- .................Add modal.................. -->
+    <dialog id="modal01" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box">
+        <div class="flex flex-col justify-center items-center">
+          <img src="./images/congo.png" alt="" srcset="" />
+          <h3 class="font-bold text-4xl">Congratulations</h3>
+          <p class="py-4">Your purchase te product</p>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              id=""
+              onclick="goHome()"
+              class="btn btn-secondary px-4 py-2 font-semibold text-white text-base"
+            >
+              Go Home
+            </button>
+          </div>
+        </div>
+      </form>
+    </dialog>
 
     <!-- Javascript connecting -->
     <script src="scripts/commonFunctions.js"></script>
     <script src="scripts/calculation.js"></script>
-
-    
-    
   </body>
 </html>

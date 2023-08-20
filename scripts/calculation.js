@@ -3,7 +3,6 @@ function firstCard() {
     totalPrice('card-01-tk');   
 }
 
-
 function secondCard(){
     addingToList('K. Accessories');
     totalPrice('card-02-tk');
@@ -26,15 +25,37 @@ function fifthCard(){
 
 function sixthCard(){
     addingToList('Sports cates');
-    totalPrice('card-06-tk');
-    
+    totalPrice('card-06-tk');    
 }
 
-// document.getElementById('apply').addEventListener('click', function(){
-//     const prevTotalId = document.getElementById('tp');
-//     const prevTotal = getInputElement('tp');
-//     if(prevTotal > 0)
-//     {
-//         this.setAttribute('disabled');
-//     }
-// })
+document.getElementById('inputText').addEventListener('keyup', function(event){
+    const text = event.target.value;
+    console.log(text);
+   
+    if(text === "SELL200")
+    {
+        document.getElementById('apply-dis').addEventListener('click', function(){
+            const prevTotal = getInputElement('tp');
+
+            // Calculating Discount
+            const discount = (0.2 * prevTotal).toFixed(2);
+            const disId = document.getElementById('discount');
+            disId.innerText = discount;
+
+            // Calculating Total
+            const totalId = document.getElementById('total');
+            const total = prevTotal - discount;
+            totalId.innerText = total;
+        })
+    }else{
+        const disId = document.getElementById('discount');
+            disId.innerText = 0;
+    }
+})
+
+
+// Go Home Button Work
+function goHome(){
+    window.location.href="index.html";
+}
+
